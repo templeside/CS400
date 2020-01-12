@@ -1,0 +1,37 @@
+p3b CONCLUSIONS.TXT
+
+Complete p3b and answer the following questions using results of running
+Java Flight Recorder and Java Mission Control to justify your conclusions..
+
+1) What can you tell about the performance of your hash table implementation compared to Java's tree map? 
+Explain why (or when) your hash table is better or worse than Java's Tree Map.
+
+My hash table has better efficiency than Java's Tree Map's because of time complexity. For most of the methods such as insert, get and remove for Tree Map is log(N), but hash table is O(1). Since the time complexity of hash table is smaller than tree map's, I was able to predict that my hash table implementation will be faster and more efficient than Java's Tree Map's.
+
+
+
+
+
+2) What did you observe in java mission control to come to the conclusion above?
+
+In java mission control, I observed each classes' performance in diverse ways. 
+From the Code section of Java Mission Control, I noticed that the Java's Tree Map's methods take more resources than three times the ADT's which means that it is more efficient to use hash code for insert, get,and remove methods than Tree Map's. Therefore, I was able to conclude that my hash table is better than Java's Tree Map. 
+
+
+
+
+3) SCREENSHOT_001.PNG NOTES: Briefly describe what this image 001 shows
+
+Image 1 is the screenshot of the circular diagram which shows distribution of the resource usage while my_profile is running. And I observed that more than half of the java.util package's color covered the area of the diagram which means that most of the time was spent executing java.util's package. Underneath hot classes section, I was also able to see that TreeMap took 74.19% from overall execution. So I thnk This screenshot supports my conclusion that Hash Table with the constant time complexity is better.
+
+
+
+
+
+4) SCREENSHOT_002.PNG NOTES: Briefly describe what this image 002 shows
+
+After observing Image 1's analysis, I was curious if any of the Hash Table's methods' performance. Then from Hot Methods section I was able to see top 8 executed methods and its percentages. 
+First and second methods were from TreeMap, and the sum of the these two methods was 72.58% which is  almost 3quarter of the memory usage. Although the third is expand table from my HashTable, I assumed that the usage of the expandedTable method will decrease if programmer increase the loadFactorThreshold. Therefore, this observation also helped me conclude that my Hash Table is better than Tree Map. 
+
+
+
